@@ -6,13 +6,13 @@ A Chrome extension for **FAST National University** students that automatically 
 
 ## What It Does
 
-FLEX requires students to submit feedback for every faculty member each semester. This extension automates that — it selects the first option (**Strongly Agree**) for every question on the feedback form and hits submit, so you're done in seconds instead of clicking through dozens of radio buttons manually.
+FLEX requires students to submit feedback for every faculty member each semester. This extension automates that — it selects the first option (**Strongly Agree**) or the last option (**Strongly Disagree**) for every question on the feedback form and hits submit, so you're done in seconds instead of clicking through dozens of radio buttons manually.
 
 ---
 
 ## Features
 
-- ✅ Auto-selects **Strongly Agree** for all feedback questions
+- ✅ Auto-selects **Strongly Agree** or **Strongly Disagree** for all feedback questions
 - 🚀 Fills and submits the form in one click
 - 📋 **Fill Only** mode — fill first, review, then submit manually
 - 🔍 Debug scanner to diagnose issues on any form page
@@ -28,17 +28,18 @@ This extension is not on the Chrome Web Store — install it manually in a minut
    ```bash
    git clone https://github.com/YOUR_USERNAME/flex-feedback-autofill.git
    ```
+2. **Extract the zip file**
 
-2. Open Chrome and navigate to:
+3. Open Chrome and navigate to:
    ```
    chrome://extensions/
    ```
 
-3. Enable **Developer mode** (toggle in the top-right corner)
+4. Enable **Developer mode** (toggle in the top-right corner)
 
-4. Click **"Load unpacked"**
+5. Click **"Load unpacked"**
 
-5. Select the downloaded/cloned folder
+6. Select the downloaded/cloned folder
 
 The ⚡ icon will appear in your Chrome toolbar.
 
