@@ -85,8 +85,8 @@ flex-feedback-autofill/
 ## Compatibility
 
 - ✅ Google Chrome (Manifest V3)
-- ✅ FAST-NU FLEX portal (flex.edu.pk)
-- ✅ Works on standard and React/Angular-based forms
+- ✅ FAST-NU FLEX portal (flexstudent.nu.edu.pk)
+- ✅ Although developed for Flex portal, it works on all standard and React/Angular-based forms
 
 ---
 
