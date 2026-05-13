@@ -1,30 +1,35 @@
-# ⚡ Feedback AutoFill — Chrome Extension
+# ⚡ FLEX Feedback AutoFill — Chrome Extension
 
-A Chrome extension that automatically selects the first option for every radio button question on feedback forms and optionally submits the form — all in one click.
+A Chrome extension for **FAST National University** students that automatically fills out faculty feedback forms on **FLEX** (the FAST Learning & Examination portal) and submits them in one click.
+
+---
+
+## What It Does
+
+FLEX requires students to submit feedback for every faculty member each semester. This extension automates that — it selects the first option (**Strongly Agree**) for every question on the feedback form and hits submit, so you're done in seconds instead of clicking through dozens of radio buttons manually.
 
 ---
 
 ## Features
 
-- ✅ Auto-selects the first option (e.g. "Strongly Agree") for all MCQ/radio button questions
-- 🚀 One-click fill + submit
-- 📋 Fill-only mode if you want to review before submitting
-- 🔍 Built-in debug scanner to inspect radio inputs on any page
-- ⚙️ Works with standard HTML forms and React/Angular-based forms
-- 🔄 Scroll-to-submit toggle for smooth UX
+- ✅ Auto-selects **Strongly Agree** for all feedback questions
+- 🚀 Fills and submits the form in one click
+- 📋 **Fill Only** mode — fill first, review, then submit manually
+- 🔍 Debug scanner to diagnose issues on any form page
+- 🔄 Smooth scroll to submit button before submitting
 
 ---
 
 ## Installation
 
-Since this extension is not published on the Chrome Web Store, install it manually:
+This extension is not on the Chrome Web Store — install it manually in a minute:
 
-1. Download or clone this repository
+1. **Download or clone this repo**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/feedback-autofill-extension.git
+   git clone https://github.com/YOUR_USERNAME/flex-feedback-autofill.git
    ```
 
-2. Open Chrome and go to:
+2. Open Chrome and navigate to:
    ```
    chrome://extensions/
    ```
@@ -33,30 +38,41 @@ Since this extension is not published on the Chrome Web Store, install it manual
 
 4. Click **"Load unpacked"**
 
-5. Select the `feedback-autofill-extension` folder
+5. Select the downloaded/cloned folder
 
-The extension icon will appear in your Chrome toolbar.
+The ⚡ icon will appear in your Chrome toolbar.
 
 ---
 
-## Usage
+## How to Use
 
-1. Open your feedback form in Chrome
-2. Click the **Feedback AutoFill** icon in the toolbar
-3. Choose an action:
-   - **Fill All & Submit** — fills every radio question and clicks the submit button
-   - **Fill Only (no submit)** — fills all questions so you can review before submitting manually
-4. Use the **🔍 Debug** button if the extension isn't working — it scans the page and shows what radio inputs were detected
+1. Log in to **FLEX** and open a faculty feedback form
+2. Click the **⚡ Feedback AutoFill** icon in the toolbar
+3. Click **"Fill All & Submit"**
+4. Done ✅
+
+> For multiple feedback forms, just navigate to each one and repeat step 3.
+
+---
+
+## Options
+
+| Option | Description |
+|--------|-------------|
+| **Fill All & Submit** | Selects Strongly Agree for all questions and submits |
+| **Fill Only (no submit)** | Fills all answers so you can review before submitting |
+| **Scroll to submit** | Smoothly scrolls to the submit button before clicking |
+| **🔍 Debug** | Scans the page and shows detected radio inputs — useful if the form isn't being filled |
 
 ---
 
 ## File Structure
 
 ```
-feedback-autofill-extension/
+flex-feedback-autofill/
 ├── manifest.json       # Chrome extension config (Manifest V3)
 ├── popup.html          # Extension popup UI
-├── popup.js            # Core logic — form filling & submission
+├── popup.js            # Core logic — form detection, filling & submission
 └── icons/
     ├── icon16.png
     ├── icon48.png
@@ -65,15 +81,17 @@ feedback-autofill-extension/
 
 ---
 
-## How It Works
+## Compatibility
 
-The extension uses multiple strategies to detect and select radio buttons:
+- ✅ Google Chrome (Manifest V3)
+- ✅ FAST-NU FLEX portal (flex.edu.pk)
+- ✅ Works on standard and React/Angular-based forms
 
-1. **Named groups** — groups radios by their `name` attribute and selects the first in each group
-2. **DOM proximity** — when radios share no name, walks up the DOM tree to find question containers
-3. **ARIA radios** — handles `[role="radio"]` custom components
-4. **Label fallback** — clicks labels directly if standard selection doesn't work
-5. **Framework-aware** — uses the native prototype setter + React's `_valueTracker` trick to work with React/Angular forms
+---
+
+## Disclaimer
+
+This extension is an unofficial student utility and is not affiliated with or endorsed by FAST National University or the FLEX platform. Use it responsibly.
 
 ---
 
